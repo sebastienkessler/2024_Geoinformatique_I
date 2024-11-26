@@ -45,6 +45,7 @@ Les couches d'origine proviennent à nouveau de swissTLM3D, donc de Swisstopo. I
 ### Calcul du nombre de personnes par tronçon
 Dans cette étape, j'ai d'abord déterminé un périmètre de 500 mètres autour de chaque tronçon routier. Ensuite, j'ai calculé la somme des habitants et emplois à l'intérieur de chacun de ces périmètres. Le nombre d'habitants et d'emplois me permet d'estimer le nombre de personnes qui se trouvent dans le périmètre, en fonction du moment dans le temps. L'estimation est fixée dans l'Ordonnance fédérale de Protection contre les Accidents Majeurs (OPAM). La formule m'intéressant est celle du nombre de personnes présentes pendant un jour de semaine car c'est à ce moment que les camions sont en circulation. 
 + Formule: N_jsem = 0.3 · P + 0.8 · E (où P = nombre d'habitants, E = nombre d'emplois, et N_jsem = nombre de personnes estimées)
+
 Pour ce faire j'ai construit un modèle à l'aide du Model Builder de QGIS. Le fonctionnement de monnmodèle est le suivant:
 + Quatres entrées sont demandées: la couche des tronçons routiers, la couche des points avec les données de population issue de l'importation du fichier CSV de Geostat, la deuxième couche des points avec données statistiques, celle des emplois, la taille du périmètre à considérer (par défaut 500 mètres)
 + Ensuite, une jointure spatiale avec résumé statistique est effectuée entre les tronçons routiers et chacune des couches statistiques. Ceci nous donne la somme d'habitants et d'emplois par tronçon.
