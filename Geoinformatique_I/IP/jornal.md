@@ -52,6 +52,7 @@ Pour ce faire j'ai construit un modèle à l'aide du Model Builder de QGIS. Le f
 + À l'aide d'une jointure par attributs sur le champ de l'identifiant unique (le champ fid), les sommes d'habitants et d'emplois sont «rapatriées» dans la couche des tronçons routiers.
 + Finalement, un calcul est effectué à l'aide de la calculatrice des champs en utilisant la formule permettant de calculer N_jsem pour ajouter une nouvelle colonne (N_jsem) avec le nombre de personnes aux alentours du tronçon.
 + Pour la couche "troncons_pers_jsem_500m" est données en sortie du modèle.
+
 Le modèle se trouve dans le dossier "scripts" de mon projet sous le nom "personnes_par_troncon.model3" et j'ai ajouté la couche "troncons_pers_jsem_500m" dans le geopackage "routes.gpkg".
 
 
